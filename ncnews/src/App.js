@@ -34,13 +34,14 @@ class App extends Component {
             <ErrorPage
               default
               status={500}
-              msg={"Oops something went wrong!"}
+              msg={"Oops something went wrong!!"}
             />
           </Router>
           <Footer/>
         </div>
       </div>
-    );
+  
+  );
   }
 }
 
