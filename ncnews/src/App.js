@@ -32,6 +32,7 @@ class App extends Component {
             />
             <ArticlesByTopic path="/topics/:topic_slug" />
             <ErrorPage
+            
               default
               status={500}
               msg={"Oops something went wrong!"}
