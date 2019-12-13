@@ -71,7 +71,6 @@ class Articles extends Component {
   }
 
   render() {
-    console.log(this.state)
     const { articles, isLoading, error, searchTerm } = this.state;
     const { loggedUser } = this.props;
     if (isLoading === true) return <LoadingIcon />;
