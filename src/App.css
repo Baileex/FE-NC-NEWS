@@ -79,17 +79,17 @@ h6 {
 
 .comment-form textarea {
   display: block;
-  width: 500%;
+  width: 400%;
   padding: 20px 32px;
-  margin-bottom: 8px;
+  margin-bottom: 40px;
   border: 0;
   font-size: 16px;
   line-height: 1;
   color: #666363;
   background: #efefef;
-  outline: none;
-  text-align: center;
-  display: inline-block
+  text-align: left;
+  align-content: center;
+  display: flex;
 
 }
 
@@ -161,7 +161,7 @@ font-family: "Oswald"
 }
 
 .container {
-  margin-top: 400px;
+  margin-top: 280px;
   max-width: 2000px;
   position: fixed;
   top: 0px;
@@ -173,13 +173,22 @@ font-family: "Oswald"
 }
 
 .homepage {
-  position: cent;
+  position: center;
   padding-top: 0px;
   z-index: 3;
 }
 
+.button-group {
+  z-index: 4;
+  grid-column-start: 1;
+  width: 100%;
+  text-align: center;
+  grid-row-start: 6;
+  margin-bottom: 20px;
+
+}
 .container-articles {
-  padding-top: 100px;
+  padding-top: 10px;
   z-index: 3;
   width: 100%;
   display:flex;
@@ -190,9 +199,12 @@ font-family: "Oswald"
 
 .sorter {
   z-index: 4;
-  background-color: #fff;
-  grid-column-start: 3;
-  grid-row-start: 1;
+  grid-column-start: 1;
+  position: flex;
+  text-align: center;
+  grid-row-start: 7;
+  margin-left: 3%;
+  margin-top: 50%;
 }
 
 .sortOptions {
@@ -204,28 +216,20 @@ width: 200px
 
 }
 
-.search-bar {
-  left: 50%;
-  z-index: 4;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  background-color: #fff;
-}
 
 .section-header {
   background-color: rgb(255, 255, 255);
   position: fixed;
   display: grid;
-  grid-auto-columns: 33%;
+  grid-auto-columns: 20%;
   grid-auto-rows: 100%;
   align-items: center;
   text-align: center;
   z-index: 4;
   padding: 0px 0px;
   width: 1000px;
-  height: 100px;
-  top: 290px;
+  height: 50px;
+  top: 20px;
 }
 
 .avatar {
@@ -260,16 +264,9 @@ width: 200px
     width: 300px;
   }
   .sorter {
-    z-index: 4;
-    background-color: #fff;
-    font-size: 2px;
-    grid-column-start: 2;
-    grid-row-start: 1;
-    display: block;
-  }
-  .search-bar {
     display: none;
   }
+ 
   .comment-form textarea {
     width: 100%;
     line-height: 0.5;
@@ -280,8 +277,9 @@ width: 200px
   }
 
   .button-group{
+    margin-top: 100%;
     width: 400px;
-    grid-row-start: 2;
+    grid-row-start: 5;
   }
 
 }
@@ -292,3 +290,6 @@ width: 200px
 }
 
 
+footer {
+  flex-shrink: 0;
+}

@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Pagination extends Component {
-  render() {
-    const { changePage, page, maxPages } = this.props;
+const Pagination = (props) => {
+    const { changePage, page, maxPages } = props;
     return (
       <div className="button-group">
         <span>
@@ -24,6 +23,5 @@ class Pagination extends Component {
       </div>
     );
   }
-}
 
 export default Pagination;

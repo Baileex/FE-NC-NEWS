@@ -7,7 +7,6 @@ import { Router } from "@reach/router";
 import Homepage from "./Components/Homepage";
 import Articles from "./Components/Articles";
 import ArticleById from "./Components/ArticleById";
-import ArticlesByTopic from "./Components/ArticlesByTopic";
 import ErrorPage from "./Components/ErrorPage";
 import User from "./Components/User";
 import Footer from "./Components/Footer";
@@ -30,11 +29,11 @@ class App extends Component {
               path="/articles/:article_id"
               loggedUser={this.state.loggedUser}
             />
-            <ArticlesByTopic path="/topics/:topic_slug" />
+            <Articles path="/topics/:topic_slug" />
             <ErrorPage
             
               default
-              status={500}
+              status={404}
               msg={"Oops something went wrong!"}
             />
           </Router>

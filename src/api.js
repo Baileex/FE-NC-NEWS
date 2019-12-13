@@ -1,8 +1,10 @@
 import axios from "axios";
 
+const baseURL = "https://ncnewsjb.herokuapp.com/api";
+
 export const getTopics = () => {
   return axios
-    .get("https://ncnewsjb.herokuapp.com/api/topics")
+    .get(`${baseURL}/topics`)
     .then(({ data }) => {
       return data.topics;
     });
@@ -10,7 +12,7 @@ export const getTopics = () => {
 
 export const getArticles = (topic_slug, sort_by, order, limit, page ) => {
   return axios
-    .get("https://ncnewsjb.herokuapp.com/api/articles", {
+    .get(`${baseURL}/articles`, {
       params: {
        topic: topic_slug,
        sort_by: sort_by,
@@ -26,7 +28,7 @@ export const getArticles = (topic_slug, sort_by, order, limit, page ) => {
 
 export const getSingleArticle = article_id => {
   return axios
-    .get(`https://ncnewsjb.herokuapp.com/api/articles/${article_id}`)
+    .get(`${baseURL}/articles/${article_id}`)
     .then(({ data }) => {
       return data.article;
     });
@@ -34,7 +36,7 @@ export const getSingleArticle = article_id => {
 
 export const getComments = (article_id, limit, p) => {
   return axios
-    .get(`https://ncnewsjb.herokuapp.com/api/articles/${article_id}/comments`, {params: {
+    .get(`${baseURL}/articles/${article_id}/comments`, {params: {
       limit: limit,
       p: p
     }})
@@ -46,7 +48,7 @@ export const getComments = (article_id, limit, p) => {
 export const postComment = (article_id, user, newComment) => {
   return axios
     .post(
-      `https://ncnewsjb.herokuapp.com/api/articles/${article_id}/comments`,
+      `${baseURL}/articles/${article_id}/comments`,
       { body: newComment, username: user }
     )
     .then(({ data }) => {
@@ -56,22 +58,22 @@ export const postComment = (article_id, user, newComment) => {
 
 export const deleteComment = comment_id => {
   return axios.delete(
-    `https://ncnewsjb.herokuapp.com/api/comments/${comment_id}`
+    `${baseURL}/comments/${comment_id}`
   )
 }
 
 export const patchVotes = (votes, id, object) => {
-  return axios.patch(`https://ncnewsjb.herokuapp.com/api/${object}/${id}`, { inc_votes: votes});
+  return axios.patch(`${baseURL}/${object}/${id}`, { inc_votes: votes});
 }
 
 export const fetchUsers = () => {
-  return axios.get("https://ncnewsjb.herokuapp.com/api/users").then(({data}) => {
+  return axios.get(`${baseURL}/users`).then(({data}) => {
     return data.users
   });
 }
 
 export const getUserByUsername = (username) => {
-  return axios.get(`https://ncnewsjb.herokuapp.com/api/users/${username}`).then(({data}) => {
+  return axios.get(`${baseURL}/users/${username}`).then(({data}) => {
     return data.user;
   });
 }

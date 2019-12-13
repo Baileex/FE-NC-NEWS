@@ -137,9 +137,10 @@ export const ArticleList = styled.ul`
   // align-content: space-around;
   // top: 0;
   // left: 0;
-  // @media only screen and (max-width: 425px) {
-  // display: flex 
-  // width: 400px
+  @media only screen and (max-width: 425px) {
+  display: flex 
+  width: 300px
+  margin-left: -10%;
 }
 `;
 

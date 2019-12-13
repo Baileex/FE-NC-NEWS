@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import * as api from "../api";
 import ErrorPage from "./ErrorPage"
+import LoadingIcon from "./LoadingIcon";
 
 class User extends Component {
   state = {
-    user: [],
+    user: "",
     isLoading: true,
     error: null
   };
@@ -32,7 +33,8 @@ class User extends Component {
   };
 
   render() {
-    const { user, error } = this.state;
+    const { user, error, loading} = this.state;
+    if (loading === true) return <LoadingIcon />
     if (error) return <ErrorPage status={error.status} msg={error.msg} />
     return (
       <div className="container-profile">

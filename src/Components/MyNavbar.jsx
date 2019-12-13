@@ -13,8 +13,8 @@ import ErrorPage from "./ErrorPage"
 
 const Navigate = styled.div`
 position: fixed;
-margin-top: 150px;
-margin-bottom: 10px;
+margin-top: 120px;
+margin-bottom: 1px;
 width: 100%
 z-index:10;
 @media only screen and (max-width: 425px ) {

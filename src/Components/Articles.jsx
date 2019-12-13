@@ -1,23 +1,13 @@
 import React, { Component } from "react";
 import * as api from "../api";
-import { Link } from "@reach/router";
 import {
   ArticleList,
-  Card,
-  Title,
-  Topic,
-  Author,
-  Date,
-  Readmore,
-  Commentcount
 } from "../articledesign";
 import LoadingIcon from "./LoadingIcon";
 import ArticlesSorter from "./ArticlesSorter";
 import ErrorPage from "./ErrorPage";
-import formatDate from "../utils/utils";
-import Voter from "./Voter";
-import SearchBar from "./SearchBar";
 import Pagination from "./Pagination";
+import ArticleCard from "./ArticleCard";
 
 class Articles extends Component {
   state = {
@@ -71,19 +61,11 @@ class Articles extends Component {
   }
 
   render() {
-    const { articles, isLoading, error, searchTerm } = this.state;
+    const { articles, isLoading, error} = this.state;
     const { loggedUser } = this.props;
     if (isLoading === true) return <LoadingIcon />;
     if (error) return <ErrorPage status={error.status} msg={error.msg} />;
-    const regEx = RegExp(searchTerm, "gi") 
-    let filtered;
-    if (searchTerm === "") {
-      filtered = articles;
-    } else {
-      filtered = articles.filter((article) => {
-        return regEx.test(article.title)
-      })
-    }
+
     return (
       <div className="body">
       <div className="section-header">
@@ -92,32 +74,13 @@ class Articles extends Component {
         </div>
         <Pagination changePage={this.changePage} page={this.state.page} maxPages={this.state.maxPages}/>
         <div className="search-bar">
-          <SearchBar stateUpdater={this.stateUpdater} />
         </div>
         </div>
         <div className="container-articles">
-          <ArticleList articles={articles} filtered={filtered} margin={1000}>
-            {filtered.map(article => {
+          <ArticleList articles={articles}  margin={1000}>
+            {articles.map(article => {
               return (
-                <Card key={article.article_id}>
-                  <Title>{article.title}</Title>
-                  <Topic>#{article.topic}</Topic>
-                  <Author>By: {article.author}</Author>
-                  {article.author !== loggedUser && (
-                    <Voter
-                      id={article.article_id}
-                      object="articles"
-                      votes={article.votes}
-                    />
-                  )}
-                  <Date>{formatDate(article.created_at)}</Date>
-                  <Commentcount>Comments: {article.comment_count}</Commentcount>
-                  <Readmore>
-                    <Link to={`/articles/${article.article_id}`}>
-                      Read More...
-                    </Link>
-                  </Readmore>
-                </Card>
+                <ArticleCard article={article} loggedUser={loggedUser} key={article.article_id}/>
               );
             })}
           </ArticleList>
