@@ -63,16 +63,16 @@ class MyNavbar extends Component {
               <Link to="/articles" className="link">
                 Articles
               </Link>
-              <NavDropdown title="Topics" id="basic-nav-dropdown">
+              <NavDropdown title="Topics" id="basic-nav-dropdown" className="topic-dd">
                 {topics.map(topic => {
                   return (
                     <li key={topic.slug} >
-                      <Link to={`/topics/${topic.slug}`}>{topic.slug} </Link>
+                      <Link className="dropdown-links" to={`/topics/${topic.slug}`}>{topic.slug} </Link>
                     </li>
                   );
                 })}
                 <NavDropdown.Divider />
-                <NavDropdown.Item>Add New Topic</NavDropdown.Item>
+                <NavDropdown.Item>Add New Topic (coming soon)</NavDropdown.Item>
               </NavDropdown>
             </Nav>
               <Link to="/user">Logged in as: {this.props.loggedUser}</Link>

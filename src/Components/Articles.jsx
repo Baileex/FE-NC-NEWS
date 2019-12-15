@@ -62,7 +62,7 @@ class Articles extends Component {
 
   render() {
     const { articles, isLoading, error} = this.state;
-    const { loggedUser } = this.props;
+    const { loggedUser, topic_slug } = this.props;
     if (isLoading === true) return <LoadingIcon />;
     if (error) return <ErrorPage status={error.status} msg={error.msg} />;
 
@@ -73,8 +73,7 @@ class Articles extends Component {
           <ArticlesSorter fetchArticles={this.fetchArticles} />
         </div>
         <Pagination changePage={this.changePage} page={this.state.page} maxPages={this.state.maxPages}/>
-        <div className="search-bar">
-        </div>
+        {topic_slug && <h2 className="topic-title">{topic_slug} articles</h2>}
         </div>
         <div className="container-articles">
           <ArticleList articles={articles}  margin={1000}>

@@ -23,10 +23,10 @@ class CommentMaker extends Component {
       <div>
         <div className="comments-form">
           <form className="comment-form" onSubmit={this.handleSubmit}>
-            <label>
+            <label className="comment-title">
               Comment
               <textarea required
-                rows="18"
+                rows="12"
                 cols="6"
                 onChange={this.handleChange}
                 value={this.state.newComment}

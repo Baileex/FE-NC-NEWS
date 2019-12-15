@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../api";
-import ErrorPage from "./ErrorPage"
+import ErrorPage from "./ErrorPage";
 import LoadingIcon from "./LoadingIcon";
 
 class User extends Component {
@@ -33,17 +33,24 @@ class User extends Component {
   };
 
   render() {
-    const { user, error, loading} = this.state;
-    if (loading === true) return <LoadingIcon />
-    if (error) return <ErrorPage status={error.status} msg={error.msg} />
+    const { user, error, loading } = this.state;
+    if (loading === true) return <LoadingIcon />;
+    if (error) return <ErrorPage status={error.status} msg={error.msg} />;
     return (
-      <div className="container-profile">
-        <img className="avatar" src={user.avatar_url} alt="Avatar"></img>
-        <div className="user-text">
-          <h2>Name: {user.name}</h2>
-          <br>
-          </br>
-          <h2>Username: {user.username}</h2>
+      <div className="column">
+        <div className="card">
+          <img
+            className="avatar"
+            src={user.avatar_url}
+            alt="Avatar"
+          ></img>
+          <div className="profile-container">
+            <h2>Name: {user.name}</h2>
+            <br></br>
+            <h2>Username: {user.username}</h2>
+            <br></br>
+            <p>About Me:</p>
+          </div>
         </div>
       </div>
     );

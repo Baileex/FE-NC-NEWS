@@ -59,7 +59,7 @@ class ArticleById extends Component {
         <br></br>
         <p className="entry-content">{article.body}</p>
         <br></br>
-        <h4>Comments: {article.comment_count}</h4>
+        <h4 className="comment-count">Comments: {article.comment_count}</h4>
         <br></br>
         <CommentsList article_id={article.article_id} user={this.state.user} />
       </article>

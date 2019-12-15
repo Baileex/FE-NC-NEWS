@@ -11,6 +11,8 @@ export const Card = styled.li`
          position: relative;
          margin-top: 15rem;
          margin: 1.5rem;
+         width: 800px;
+         margin-left: 30%
          @media only screen and (max-width: 425px) {
          width: 300px;
          grid-template-columns: 100px 100px 100px 100px
@@ -102,16 +104,19 @@ export const Votes = styled.div`
 `;
 
 export const Upvote = styled.button`
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  padding: 3px;
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-   cursor: default;
-   :active {
-     border: solid orange;
-   }
-`;
+         border: solid black;
+         border-width: 0 3px 3px 0;
+         padding: 3px;
+         transform: rotate(-135deg);
+         -webkit-transform: rotate(-135deg);
+         cursor: default;
+         :active {
+           border: solid yellow;
+         }
+         :hover {
+           border: solid yellow;
+         }
+       `;
 
 export const Downvote = styled.button`
          border: solid black;
@@ -121,10 +126,10 @@ export const Downvote = styled.button`
          -webkit-transform: rotate(45deg);
          cursor: default;
          :active {
-           border: solid orange;
+           border: solid yellow;
          }
          :hover {
-           border: solid orange;
+           border: solid yellow;
          }
        `;
 
@@ -133,14 +138,11 @@ export const ArticleList = styled.ul`
   display: flex;
   flex-direction: column;
   width: 2000px
-  // flex-wrap: nowrap;
-  // align-content: space-around;
-  // top: 0;
-  // left: 0;
+  margin-left: -10%;
   @media only screen and (max-width: 425px) {
   display: flex 
   width: 300px
-  margin-left: -10%;
+  margin-left: -20%;
 }
 `;
 

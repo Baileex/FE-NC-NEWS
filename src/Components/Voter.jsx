@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../api";
 import { Votes, Upvote, Downvote, Votebox } from "../articledesign";
-import ErrorPage from "./ErrorPage";
+import Errormsg from "./Errormsg";
 
 class Voter extends Component {
   state = {
@@ -45,7 +45,7 @@ class Voter extends Component {
           name="down"
           disabled={votesDifference === -1}
         ></Downvote>
-        {error && <ErrorPage status={error.status} msg={error.msg} />}
+        {error && <Errormsg status={error.status} msg="vote not registered" />}
       </Votebox>
     );
   }
