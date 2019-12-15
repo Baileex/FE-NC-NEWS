@@ -77,3 +77,9 @@ export const getUserByUsername = (username) => {
     return data.user;
   });
 }
+
+export const postTopic = (title, description) => {
+return axios.post(`${baseURL}/topics`, {slug: title, description: description}).then(({data}) => {
+  return data.topic;
+})
+}

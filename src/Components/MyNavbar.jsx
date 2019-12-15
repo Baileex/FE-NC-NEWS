@@ -1,30 +1,26 @@
 import React, { Component } from "react";
 import * as api from "../api";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-} from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
 import { Link } from "@reach/router";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ErrorPage from "./ErrorPage"
-
+import ErrorPage from "./ErrorPage";
+import TopicAdder from "./TopicAdder";
 
 const Navigate = styled.div`
 position: fixed;
 margin-top: 120px;
 margin-bottom: 1px;
 width: 100%
-z-index:10;
+z-index: 10;
 @media only screen and (max-width: 425px ) {
-  width: 95%
+  width: 99%
 }
 `;
 
 class MyNavbar extends Component {
   state = {
-    topics: [],
+    topics: []
   };
 
   componentDidMount = () => {
@@ -32,18 +28,26 @@ class MyNavbar extends Component {
   };
 
   fetchTopics = () => {
-    api.getTopics().then(topics => {
-      this.setState({ topics: topics });
-    }).catch(({response}) => {
-      this.setState({
-        error: {
-          msg: response.data.msg,
-          status: response.status
-        }
+    api
+      .getTopics()
+      .then(topics => {
+        this.setState({ topics: topics });
+      })
+      .catch(({ response }) => {
+        this.setState({
+          error: {
+            msg: response.data.msg,
+            status: response.status
+          }
+        });
       });
-    })
   };
 
+  componentDidUpdate = (prevProps, prevState) => {
+    if (prevState.topics !== this.state.topics) {
+      this.fetchTopics();
+    }
+  };
 
   render() {
     const { topics, error } = this.state;
@@ -53,7 +57,7 @@ class MyNavbar extends Component {
         <Navbar bg="light" expand="lg">
           <Navbar.Brand>
             <Link to="/">NC News</Link>
-            </Navbar.Brand>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -63,19 +67,32 @@ class MyNavbar extends Component {
               <Link to="/articles" className="link">
                 Articles
               </Link>
-              <NavDropdown title="Topics" id="basic-nav-dropdown" className="topic-dd">
-                {topics.map(topic => {
-                  return (
-                    <li key={topic.slug} >
-                      <Link className="dropdown-links" to={`/topics/${topic.slug}`}>{topic.slug} </Link>
-                    </li>
-                  );
-                })}
-                <NavDropdown.Divider />
-                <NavDropdown.Item>Add New Topic (coming soon)</NavDropdown.Item>
+              <NavDropdown
+                title="Topics"
+                id="basic-nav-dropdown"
+                className="NavDropdown"
+                
+              >
+                <div className="topic-dd">
+                  {topics.map(topic => {
+                    return (
+                      <li key={topic.slug}>
+                        <Link
+                          className="dropdown-links"
+                          to={`/topics/${topic.slug}`}
+                        >
+                          {topic.slug}{" "}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                  <NavDropdown.Divider />
+
+                  <TopicAdder />
+                </div>
               </NavDropdown>
             </Nav>
-              <Link to="/user">Logged in as: {this.props.loggedUser}</Link>
+            <Link to="/user">Logged in as: {this.props.loggedUser}</Link>
           </Navbar.Collapse>
         </Navbar>
       </Navigate>

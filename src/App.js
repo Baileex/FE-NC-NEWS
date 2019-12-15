@@ -10,6 +10,7 @@ import ArticleById from "./Components/ArticleById";
 import ErrorPage from "./Components/ErrorPage";
 import User from "./Components/User";
 import Footer from "./Components/Footer";
+import TopicAdder from "./Components/TopicAdder"
 
 class App extends Component {
   state = {
@@ -30,6 +31,7 @@ class App extends Component {
               loggedUser={this.state.loggedUser}
             />
             <Articles path="/topics/:topic_slug" />
+            <TopicAdder path="/topics/newtopic"/>
             <ErrorPage
             
               default

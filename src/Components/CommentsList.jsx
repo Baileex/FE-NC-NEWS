@@ -119,6 +119,7 @@ class CommentsList extends Component {
                   </div>
                   {comment.author === user && (
                     <button
+                      className="w3-button w3-light-grey w3-section delete-button"
                       onClick={() => this.removeComment(comment.comment_id)}
                     >
                       Delete
