@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import Header from "./Components/Header";
 import MyNavbar from "./Components/MyNavbar";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,6 +10,7 @@ import ErrorPage from "./Components/ErrorPage";
 import User from "./Components/User";
 import Footer from "./Components/Footer";
 import TopicAdder from "./Components/TopicAdder"
+import "./App.css";
 
 class App extends Component {
   state = {
