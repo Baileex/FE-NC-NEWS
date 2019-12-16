@@ -17,8 +17,8 @@ export const Card = styled.li`
          width: 300px;
          grid-template-columns: 100px 100px 100px 100px
          grid-auto-rows: 50px
-
 }
+
        `;
 
 export const Title = styled.h4`
@@ -26,6 +26,11 @@ export const Title = styled.h4`
          grid-column-end: 1
  @media only screen and (max-width: 425px) {
            font-size: 18px
+           grid-column-start: 1
+         grid-column-end: 4
+         }
+         @media only screen and (max-width: 768px) {
+           font-size: 20px
            grid-column-start: 1
          grid-column-end: 4
          }
@@ -142,7 +147,22 @@ export const ArticleList = styled.ul`
   @media only screen and (max-width: 425px) {
   display: flex 
   width: 300px
+}
+ @media only screen and (max-width: 375px) {
+  display: flex 
+  width: 300px
   margin-left: -20%;
+}
+ @media only screen and (max-width: 320px) {
+  display: flex 
+  width: 300px
+  margin-left: -35%;
+}
+ @media only screen and (max-width: 768px) {
+  display: flex 
+  width: 500px
+  margin-left: -30%;
+  margin-top: 10%;
 }
 `;
 
