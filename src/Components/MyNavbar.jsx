@@ -54,9 +54,9 @@ class MyNavbar extends Component {
     if (error) return <ErrorPage status={error.status} msg={error.msg} />;
     return (
       <Navigate>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" collapseOnSelect = "true" >
           <Navbar.Brand>
-            <Link to="/">NC News</Link>
+            <Link to="/" className="home-link">NC News</Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -71,7 +71,7 @@ class MyNavbar extends Component {
                 title="Topics"
                 id="basic-nav-dropdown"
                 className="NavDropdown"
-                
+                expand="lg"
               >
                 <div className="topic-dd">
                   {topics.map(topic => {
@@ -81,7 +81,7 @@ class MyNavbar extends Component {
                           className="dropdown-links"
                           to={`/topics/${topic.slug}`}
                         >
-                          {topic.slug}{" "}
+                          {topic.slug}
                         </Link>
                       </li>
                     );
@@ -92,7 +92,7 @@ class MyNavbar extends Component {
                 </div>
               </NavDropdown>
             </Nav>
-            <Link to="/user">Logged in as: {this.props.loggedUser}</Link>
+            <Link to="/user" className="logged-in">Logged in as: {this.props.loggedUser}</Link>
           </Navbar.Collapse>
         </Navbar>
       </Navigate>

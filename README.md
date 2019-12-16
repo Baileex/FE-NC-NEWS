@@ -7,6 +7,7 @@ This project is a news style site with functions including:
 * viewing individual articles and comments
 * article/comment voting
 * comment posting/deleting
+* adding new topics
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -34,7 +35,12 @@ Dependencies:
   * axios: ^0.19.0,
   * react: ^16.12.0,
   * react-dom: ^16.12.0,
-  * react-scripts: 3.2.0
+  * react-scripts: 3.3.0
+  * styled-components: ^4.4.1,
+  * react-loading: ^2.0.3,
+  * react-bootstrap: ^1.0.0-beta.16,
+  
+
 
 Install all dependencies with
 

@@ -19,7 +19,7 @@ const ArticleCard = props => {
       <Card key={article.article_id}>
         <Title>{article.title}</Title>
         <Topic>
-          <Link to={`/topics/${article.topic}`}>#{article.topic}</Link>
+          <Link className="hashtag" to={`/topics/${article.topic}`}>#{article.topic}</Link>
         </Topic>
 
         <Author>By: {article.author}</Author>
@@ -33,7 +33,7 @@ const ArticleCard = props => {
         <Date>{formatDate(article.created_at)}</Date>
         <Commentcount>Comments: {article.comment_count}</Commentcount>
         <Readmore>
-          <Link to={`/articles/${article.article_id}`}>Read More...</Link>
+          <Link className="readmore" to={`/articles/${article.article_id}`}>Read More...</Link>
         </Readmore>
       </Card>
     </div>

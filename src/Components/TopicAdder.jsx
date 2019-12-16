@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import * as api from "../api"
+import * as api from "../api";
+import Errormsg from "./Errormsg";
 
 class TopicAdder extends Component {
   state = {
   title: "",
-  description: ""
+  description: "",
+  error: ""
   }
 
   handleChange = event  => {
@@ -17,10 +19,18 @@ class TopicAdder extends Component {
     const {title, description} = this.state;
     api.postTopic(title, description).then(topic => {
       this.setState({title: "", description: ""})
-    })
+    }).catch(({ response }) => {
+        this.setState({
+          error: {
+            msg: response.data.msg,
+            status: response.status
+          },
+        });
+      });
   }
 
   render() {
+    const {error} = this.state;
     return (
       <>
         <h3>New Topic</h3>
@@ -43,7 +53,7 @@ class TopicAdder extends Component {
               <textarea
                 required
                 rows="2"
-                cols="14"
+                cols="34"
                 type="text"
                 name="description"
                 value={this.state.description}
@@ -52,7 +62,7 @@ class TopicAdder extends Component {
                 className="input"
               />
             </label>
-
+            {error && <Errormsg/>}
             <button className="w3-button w3-light-grey w3-section topic-submit">Submit</button>
           </form>
         </div>
