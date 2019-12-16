@@ -34,6 +34,15 @@ export const Title = styled.h4`
            grid-column-start: 1
          grid-column-end: 4
          }
+         @media only screen and (max-width: 320px) {
+           font-size: 18px
+         }
+         @media only screen and (max-width: 375px) {
+           font-size: 18px
+         }
+         @media only screen and (max-width: 425px) {
+           font-size: 18px
+         }
        `;
 
 export const Topic = styled.p`
@@ -146,7 +155,7 @@ export const ArticleList = styled.ul`
   margin-left: -10%;
   @media only screen and (max-width: 425px) {
   display: flex 
-  width: 300px
+  width: 400px
 }
  @media only screen and (max-width: 375px) {
   display: flex 
