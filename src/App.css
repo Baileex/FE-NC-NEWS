@@ -708,7 +708,7 @@ ul {
   .topic-title {
     font-size: 50px;
     position: fixed;
-    margin-top: 65%;
+    margin-top: 60%;
     margin-left: 5%;
     margin-bottom: 65%;
     background-color: white;
@@ -804,7 +804,7 @@ ul {
 
   .container-articles {
     margin-top: 20px;
-    margin-left: -5%;
+    margin-left: 20%;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -899,7 +899,7 @@ ul {
 
   .button-group {
     margin-top: 50%;
-    margin-left: 10%;
+    margin-left: -5%;
     width: 400px;
     grid-row-start: 5;
   }
@@ -930,7 +930,7 @@ ul {
   .topic-title {
     font-size: 50px;
     position: fixed;
-    margin-top: 70%;
+    margin-top: 65%;
     margin-left: 0%;
     margin-bottom: 65%;
     background-color: white;
@@ -938,8 +938,8 @@ ul {
   }
 
   .container-articles {
-    margin-top: 20px;
-    margin-left: -14%;
+    margin-top: 5px;
+    margin-left: 18%;
   }
 }
 
@@ -1075,7 +1075,7 @@ ul {
 
   .container-articles {
     margin-top: 20px;
-    margin-left: -23%;
+    margin-left: 1%;
   }
 }
 .App {
@@ -1107,7 +1107,6 @@ footer {
 
 .topic-dd {
   margin-top: 1%;
-  /* overflow-y: auto; */
   height: 100%;;
   width: 100%;
 }
