@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../api";
-import { Votes, Upvote, Downvote, Votebox } from "../articledesign";
+import { Votes, Upvote, Downvote, Votebox } from "../component-css/articledesign";
 import Errormsg from "./Errormsg";
 
 class Voter extends Component {

@@ -4,7 +4,6 @@ import React, { Component } from "react";
 class CommentMaker extends Component {
   state = {
     newComment: "",
-    isLoading: true
   };
 
   handleSubmit = event => {

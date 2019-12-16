@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as api from "../api";
 import {
   ArticleList,
-} from "../articledesign";
+} from "../component-css/articledesign";
 import LoadingIcon from "./LoadingIcon";
 import ArticlesSorter from "./ArticlesSorter";
 import ErrorPage from "./ErrorPage";

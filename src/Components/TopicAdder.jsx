@@ -33,7 +33,7 @@ class TopicAdder extends Component {
     const {error} = this.state;
     return (
       <>
-        <h3>New Topic</h3>
+        <h3 className="new-topic">New Topic</h3>
         <div className="topics-form">
           <form onSubmit={this.handleSubmit}>
             <label className="labels">
@@ -62,7 +62,7 @@ class TopicAdder extends Component {
                 className="input"
               />
             </label>
-            {error && <Errormsg/>}
+            {error && <Errormsg status={error.status} msg="topic not added"/>}
             <button className="w3-button w3-light-grey w3-section topic-submit">Submit</button>
           </form>
         </div>

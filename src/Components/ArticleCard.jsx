@@ -7,7 +7,7 @@ import {
   Date,
   Readmore,
   Commentcount
-} from "../articledesign";
+} from "../component-css/articledesign";
 import formatDate from "../utils/utils";
 import { Link } from "@reach/router";
 import Voter from "./Voter";

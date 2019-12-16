@@ -21,6 +21,12 @@ h6 {
 .logged-in {
 color: grey;
 }
+
+.new-topic {
+  margin-left: 2%;
+}
+
+
 .home-link {
   color: grey;
   font-family: "Oswald";
@@ -337,7 +343,19 @@ ul {
   border: 1px solid #ddd;
 }
 
-  
+  .comment-form input[type="submit"] {
+  display: block;
+  width: 200px;
+  padding: 20px 0;
+  margin-top: 0px;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  border: 0;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1;
+  background: #2f2f2f;
+}
 
   .dropdown-menu {
   width: 100%;
@@ -411,11 +429,13 @@ ul {
     color: red;
   }
 
+
   .comment-form textarea {
     display: block;
-    width: 200%;
+    width: 350%;
     padding: 20px 32px;
     margin-bottom: 40px;
+    margin-left: -135%;
     border: 0;
     font-size: 16px;
     line-height: 1;
