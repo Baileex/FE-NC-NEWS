@@ -12,12 +12,27 @@ export const Card = styled.li`
          margin-top: 15rem;
          margin: 1.5rem;
          width: 800px;
-         margin-left: 30%
+         margin-left: 30%      
+         
+         @media only screen and (max-width: 1024px) {
+         width: 750px;
+         grid-template-columns: 555px 111px 111px 111px
+         grid-auto-rows: 50px
+} 
+
+         @media only screen and (max-width: 768px) {
+         width: 475px;
+         grid-template-columns: 200px 100px 100px 50px
+         grid-auto-rows: 50px
+}
          @media only screen and (max-width: 425px) {
          width: 300px;
          grid-template-columns: 100px 100px 100px 100px
          grid-auto-rows: 50px
 }
+        
+
+
 
        `;
 
@@ -30,9 +45,10 @@ export const Title = styled.h4`
          grid-column-end: 4
          }
          @media only screen and (max-width: 768px) {
-           font-size: 20px
+           font-size: 25px
            grid-column-start: 1
-         grid-column-end: 4
+           grid-column-end: 4
+           margin-left: 1%;
          }
          @media only screen and (max-width: 320px) {
            font-size: 18px
@@ -91,6 +107,14 @@ grid-row-end: 6
          grid-column-end: 4
          gird-row-start: 5
 grid-row-end: 6
+         }
+         @media only screen and (max-width: 320px) {
+           font-size: 18px
+           grid-column-start: 3
+         grid-column-end: 4
+         gird-row-start: 5
+grid-row-end: 6
+
          }
 `;
 
@@ -152,27 +176,31 @@ export const ArticleList = styled.ul`
   display: flex;
   flex-direction: column;
   width: 2000px
-  margin-left: -10%;
+  margin-left: -5%; 
+  
+  @media only screen and (max-width: 768px) {
+  display: flex 
+  width: 100px
+  margin-left: 32%;
+  margin-top: 10%;
+}
   @media only screen and (max-width: 425px) {
   display: flex 
   width: 400px
+  margin-left: -28%;
+  margin-top: 2%;
 }
  @media only screen and (max-width: 375px) {
   display: flex 
   width: 300px
-  margin-left: -20%;
+  margin-left: -26%;
 }
  @media only screen and (max-width: 320px) {
   display: flex 
   width: 300px
-  margin-left: -35%;
+  margin-left: -10.75%;
 }
- @media only screen and (max-width: 768px) {
-  display: flex 
-  width: 500px
-  margin-left: -30%;
-  margin-top: 10%;
-}
+
 `;
 
 

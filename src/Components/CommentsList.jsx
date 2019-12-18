@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import * as api from "../api";
-import formatDate from "../utils/utils";
 import CommentMaker from "./CommentMaker";
-import Voter from "./Voter";
 import Pagination from "./Pagination";
 import ErrorPage from "./ErrorPage";
+import CommentCard from "./CommentCard";
 
 class CommentsList extends Component {
   state = {
@@ -94,39 +93,10 @@ class CommentsList extends Component {
     if (error) return <ErrorPage status={error.status} msg={error.msg} />;
     return (
       <div>
-        <ul>
+        <ul className="comment-list">
           {comments.map(comment => {
             return (
-              <li className="comment" key={comment.comment_id}>
-                <div className="comment-body flex justify-content-between">
-                  <div className="comment-wrap">
-                    <div className="comment-author flex flex-wrap align-items-center">
-                      <span className="fn">
-                        <h6>{comment.author}</h6>
-                      </span>
-                      <br></br>
-                      <span className="comment-meta">
-                        <h6>{formatDate(comment.created_at)}</h6>
-                        <br></br>
-                        <Voter
-                          id={comment.comment_id}
-                          object="comments"
-                          votes={comment.votes}
-                        ></Voter>
-                      </span>
-                    </div>
-                    <p>{comment.body}</p>
-                  </div>
-                  {comment.author === user && (
-                    <button
-                      className="w3-button w3-light-grey w3-section delete-button"
-                      onClick={() => this.removeComment(comment.comment_id)}
-                    >
-                      Delete
-                    </button>
-                  )}
-                </div>
-              </li>
+              <CommentCard comment={comment} user={user}/>
             );
           })}
         </ul>

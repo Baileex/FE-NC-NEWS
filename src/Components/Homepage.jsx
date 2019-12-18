@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Homepage extends Component {
-  render() {
+const Homepage = (props) => {
     return (
       <div className="homepage">
         <h1 className="w3-center">About NC News</h1>
@@ -25,7 +24,6 @@ class Homepage extends Component {
         </p>
       </div>
     );
-  }
 }
 
 export default Homepage;

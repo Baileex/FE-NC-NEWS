@@ -14,18 +14,24 @@ h6 {
 }
 .dropdown-menu {
   width: 1000%;
-  height: 2100%;
-  overflow-y: auto; 
+  height: 1700%;
+  overflow-y: auto;
 }
-
+footer {
+  width: 20%;
+  left: -100px;
+  right: 0px;
+  bottom: 0px;
+  margin-top: 50%;
+  z-index: 1;
+}
 .logged-in {
-color: grey;
+  color: grey;
 }
 
 .new-topic {
   margin-left: 2%;
 }
-
 
 .home-link {
   color: grey;
@@ -40,8 +46,8 @@ color: grey;
 }
 
 .readmore:hover {
-   cursor: pointer;
-  color: rgb(0, 0, 0); 
+  cursor: pointer;
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 
@@ -83,7 +89,6 @@ color: grey;
 .comment-wrap {
   width: calc(100% - 84px);
 }
-
 
 .comment-author a {
   line-height: 1;
@@ -182,7 +187,6 @@ ul {
   margin: 5px 10px 5px 10px;
 }
 
-
 .header-text {
   font-size: 80px;
 }
@@ -260,7 +264,6 @@ ul {
   margin-left: 10%;
 }
 
-
 @media only screen and (max-width: 2560px) {
   .topic-title {
     margin-top: 8.5%;
@@ -303,7 +306,6 @@ ul {
   }
 }
 
-
 .sorter {
   z-index: 4;
   grid-column-start: 1;
@@ -312,7 +314,7 @@ ul {
   grid-row-start: 7;
   margin-left: 30%;
   margin-top: 60%;
-
+  font-family: "Oswald"
 }
 
 .sortOptions {
@@ -372,57 +374,58 @@ ul {
 }
 
 
-
-
-
-
-
-
-
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1440px) {
   .header {
-    width: 995px;
+    width: 1440px;
   }
-   .topic-dd {
-     width: 100%;
-   }
-
-  .input {
-  text-align: left;
-  vertical-align: middle;
-  margin-left: 60%;
-  margin-top: 1%;
-  width: 100%;
-  margin: 10px 50px 15px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-
-  .comment-form input[type="submit"] {
-  display: block;
-  width: 200px;
-  padding: 20px 0;
-  margin-top: 0px;
-  margin-bottom: 10%;
-  margin-left: 20%;
-  border: 0;
-  font-size: 14px;
-  color: #fff;
-  line-height: 1;
-  background: #2f2f2f;
-}
+  .topic-dd {
+    width: 100%;
+  }
 
   .dropdown-menu {
-  width: 900%;
-  height: 2100%;
-  overflow-y: auto; 
-}
+    width: 2000%;
+    height: 20000%;
+    overflow-y: auto;
+  }
+
+  .input {
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 60%;
+    margin-top: 1%;
+    width: 100%;
+    margin: 10px 50px 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+
+  .comment-form input[type="submit"] {
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    margin-top: 0px;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    background: #2f2f2f;
+  }
+
+  .dropdown-menu {
+    width: 900%;
+    height: 1000%;
+    overflow-y: auto;
+  }
+
+
+
   .labels {
-  /* margin-left: 10%;   */
-  font-family: "Oswald";
-  margin: 5px 10px 5px 10px;
-}
+    font-family: "Oswald";
+    margin: 5px 10px 5px 10px;
+  }
   .section-header {
     width: 300px;
   }
@@ -437,17 +440,193 @@ ul {
     background-color: #fff;
     border: 1px solid #ddd;
   }
- 
 
   .topic-dd {
     overflow-y: auto;
     height: 100px;
-
   }
 
   .topic-submit {
-  margin-left: 35%;
+    margin-left: 35%;
+  }
+
+  .delete-button {
+    margin-left: -8%;
+  }
+
+  .comment-list {
+    text-align: center;
+    list-style-type: none;
+    margin-left: 7%;
+  }
+
+  .comment-count {
+    margin-left: 0%;
+  }
+
+  .w3-large {
+    font-size: 100px;
+  }
+
+  .entry-content {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .button-group {
+    margin-top: 90%;
+    margin-left: 1800%;
+    width: 400px;
+    grid-row-start: 5;
+    font-family: "Oswald"
+  }
+  
+  footer {
+    width: 100%;
+    margin-left: -0.5%;
+  }
+
+  .error-msg {
+    left: -55%;
+    top: 60%;
+    color: red;
+  }
+  .sortOptions {
+    margin-top: -40%;
+    margin-left: 4%;
+    width: 10%;
+    font-family: "Oswald"
+  }
+
+  .options {
+    width: 800%;
+  }
+
+  .comment-form {
+    margin-top: -90%;
+  }
+
+  .comment-form textarea {
+    display: block;
+    width: 350%;
+    padding: 20px 32px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: -135%;
+    border: 0;
+    font-size: 16px;
+    line-height: 1;
+    color: #666363;
+    background: #efefef;
+    text-align: left;
+    align-content: center;
+    display: flex;
+  }
+
+  .comment-form input[type="submit"] {
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    margin-top: -40px;
+    margin-bottom: 20%;
+    margin-left: 40%;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    background: #2f2f2f;
+  }
+
+  .topic-title {
+    font-size: 50px;
+    position: fixed;
+    margin-top: 15%;
+    margin-left: 2%;
+    margin-bottom: 65%;
+    background-color: white;
+    padding-bottom: 1px;
+  }
+
+  .container-articles {
+    margin-top: 20px;
+    margin-left: -11%;
+  }
 }
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    width: 995px;
+  }
+  .topic-dd {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    width: 2000%;
+    height: 20000%;
+    overflow-y: auto;
+  }
+
+  .input {
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 60%;
+    margin-top: 1%;
+    width: 100%;
+    margin: 10px 50px 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+
+  .comment-form input[type="submit"] {
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    margin-top: 0px;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    background: #2f2f2f;
+  }
+
+  .dropdown-menu {
+    width: 900%;
+    height: 1000%;
+    overflow-y: auto;
+  }
+
+  .labels {
+    /* margin-left: 10%;   */
+    font-family: "Oswald";
+    margin: 5px 10px 5px 10px;
+  }
+  .section-header {
+    width: 300px;
+  }
+  .input {
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 70%;
+    margin-top: 1%;
+    width: 10%;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+
+  .topic-dd {
+    overflow-y: auto;
+    height: 100px;
+  }
+
+  .topic-submit {
+    margin-left: 35%;
+  }
 
   .delete-button {
     margin-left: -22%;
@@ -462,12 +641,6 @@ ul {
     margin-left: -10%;
   }
 
-    .dropdown-menu {
-  width: 100%;
-  height: 500px;
-  overflow-y: auto; 
-}
-
   .w3-large {
     font-size: 100px;
   }
@@ -478,10 +651,16 @@ ul {
   }
 
   .button-group {
-    margin-top: 100%;
-    margin-left: 280%;
+    margin-top: 80%;
+    margin-left: 1200%;
     width: 400px;
     grid-row-start: 5;
+    font-family: "Oswald"
+  }
+  
+  footer {
+    width: 100%;
+    margin-left: -0.5%;
   }
 
   .error-msg {
@@ -489,14 +668,16 @@ ul {
     top: 60%;
     color: red;
   }
-   .sortOptions {
-     margin-top: -40%;
-     width: 10%;
-   }
+  .sortOptions {
+    margin-top: -40%;
+    margin-left: 4%;
+    width: 10%;
+    font-family: "Oswald"
+  }
 
-   .options {
+  .options {
     width: 800%;
-   }
+  }
 
   .comment-form textarea {
     display: block;
@@ -526,17 +707,19 @@ ul {
 
   .container-articles {
     margin-top: 20px;
-    margin-left: -11%; 
+    margin-left: -11%;
   }
 }
 @media only screen and (max-width: 768px) {
   .header {
-    width: 425px;
+    width: 825px;
   }
 
   .sortOptions {
     margin-left: 0%;
-    width: 100%;
+    width:110%;
+    font-family: "Oswald";
+    background: white;
   }
 
   .options {
@@ -544,46 +727,45 @@ ul {
   }
 
   .sorter {
-   margin-top: 50%; 
+    margin-top: 50%;
   }
 
-
   .input {
-  text-align: left;
-  vertical-align: middle;
-  margin-left: 60%;
-  margin-top: 1%;
-  width: 100%;
-  margin: 10px 50px 15px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 60%;
+    margin-top: 1%;
+    width: 100%;
+    margin: 10px 50px 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
 
   .comment-form input[type="submit"] {
-  display: block;
-  width: 200px;
-  padding: 20px 0;
-  margin-top: 0px;
-  margin-bottom: 10%;
-  margin-left: 20%;
-  border: 0;
-  font-size: 14px;
-  color: #fff;
-  line-height: 1;
-  background: #2f2f2f;
-}
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    margin-top: 0px;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    background: #2f2f2f;
+  }
 
   .dropdown-menu {
-  width: 100%;
-  overflow-y: auto;
-  height: 300px;
-}
+    width: 100%;
+    overflow-y: auto;
+    height: 300px;
+  }
   .labels {
-  /* margin-left: 10%;   */
-  font-family: "Oswald";
-  margin: 5px 10px 5px 10px;
-}
+    /* margin-left: 10%;   */
+    font-family: "Oswald";
+    margin: 5px 10px 5px 10px;
+  }
   .section-header {
     width: 300px;
   }
@@ -598,7 +780,6 @@ ul {
     background-color: #fff;
     border: 1px solid #ddd;
   }
- 
 
   .topic-dd {
     overflow-y: auto;
@@ -606,8 +787,8 @@ ul {
   }
 
   .topic-submit {
-  margin-left: 35%;
-}
+    margin-left: 35%;
+  }
 
   .delete-button {
     margin-left: -22%;
@@ -632,10 +813,11 @@ ul {
   }
 
   .button-group {
-    margin-top: 50%;
-    margin-left: 180%;
+    margin-top: 120%;
+    margin-left: 800%;
     width: 400px;
     grid-row-start: 5;
+    font-family: "Oswald"
   }
 
   .error-msg {
@@ -643,7 +825,6 @@ ul {
     top: 60%;
     color: red;
   }
-
 
   .comment-form textarea {
     display: block;
@@ -665,7 +846,7 @@ ul {
     font-size: 50px;
     position: fixed;
     margin-top: 28%;
-    margin-left: 25%;
+    margin-left: 5%;
     margin-bottom: 55%;
     background-color: white;
     padding-bottom: 10px;
@@ -680,31 +861,35 @@ ul {
     width: 425px;
   }
 
+  .homepage {
+    width: 28%;
+  }
+
   .input {
-  text-align: left;
-  vertical-align: middle;
-  margin-left: 60%;
-  margin-top: 1%;
-  width: 100%;
-  margin: 10px 50px 15px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 60%;
+    margin-top: 1%;
+    width: 100%;
+    margin: 10px 50px 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
 
   .comment-form input[type="submit"] {
-  display: block;
-  width: 200px;
-  padding: 20px 0;
-  margin-top: 0px;
-  margin-bottom: 10%;
-  margin-left: 20%;
-  border: 0;
-  font-size: 14px;
-  color: #fff;
-  line-height: 1;
-  background: #2f2f2f;
-}
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    margin-top: 0px;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    background: #2f2f2f;
+  }
   .topic-title {
     font-size: 50px;
     position: fixed;
@@ -715,14 +900,14 @@ ul {
     padding-bottom: 10px;
   }
   .dropdown-menu {
-  width: 100%;
-  overflow-y: auto;
-  height: 300px;
-}
+    width: 100%;
+    overflow-y: auto;
+    height: 300px;
+  }
   .labels {
-  font-family: "Oswald";
-  margin: 5px 10px 5px 10px;
-}
+    font-family: "Oswald";
+    margin: 5px 10px 5px 10px;
+  }
   .section-header {
     width: 300px;
   }
@@ -747,8 +932,8 @@ ul {
   }
 
   .topic-submit {
-  margin-left: 35%;
-}
+    margin-left: 35%;
+  }
 
   .delete-button {
     margin-left: -22%;
@@ -772,6 +957,10 @@ ul {
     width: 100%;
   }
 
+  .single-article {
+    width: 28%;
+  }
+
   .button-group {
     margin-top: 90%;
     margin-left: 180%;
@@ -785,10 +974,13 @@ ul {
     color: red;
   }
 
+  footer {
+    width: 27%
+  }
 
   .comment-form textarea {
     display: block;
-    width: 350%;
+    width: 360%;
     padding: 20px 32px;
     margin-bottom: 40px;
     margin-left: -135%;
@@ -811,43 +1003,49 @@ ul {
   .header {
     width: 425px;
   }
-
+  .homepage {
+    width: 24%;
+  }
   .input {
-  text-align: left;
-  vertical-align: middle;
-  margin-left: 60%;
-  margin-top: 1%;
-  width: 100%;
-  margin: 10px 50px 15px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 60%;
+    margin-top: 1%;
+    width: 100%;
+    margin: 10px 50px 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
 
   .comment-form input[type="submit"] {
-  display: block;
-  width: 200px;
-  padding: 20px 0;
-  margin-top: 0px;
-  margin-bottom: 10%;
-  margin-left: 20%;
-  border: 0;
-  font-size: 14px;
-  color: #fff;
-  line-height: 1;
-  background: #2f2f2f;
-}
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    margin-top: 0px;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    background: #2f2f2f;
+  }
+
+  .single-article {
+    width: 25%;
+  }
 
   .dropdown-menu {
-  width: 100%;
-  overflow-y: auto;
-  height: 300px;
-}
+    width: 100%;
+    overflow-y: auto;
+    height: 300px;
+  }
   .labels {
-  /* margin-left: 10%;   */
-  font-family: "Oswald";
-  margin: 5px 10px 5px 10px;
-}
+    /* margin-left: 10%;   */
+    font-family: "Oswald";
+    margin: 5px 10px 5px 10px;
+  }
   .section-header {
     width: 300px;
   }
@@ -872,8 +1070,8 @@ ul {
   }
 
   .topic-submit {
-  margin-left: 35%;
-}
+    margin-left: 35%;
+  }
 
   .delete-button {
     margin-left: -22%;
@@ -910,7 +1108,6 @@ ul {
     color: red;
   }
 
-
   .comment-form textarea {
     display: block;
     width: 350%;
@@ -941,6 +1138,10 @@ ul {
     margin-top: 5px;
     margin-left: 18%;
   }
+
+  footer {
+    width: 24%;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -948,42 +1149,53 @@ ul {
     width: 425px;
   }
 
+  .homepage {
+    width: 20%;
+  }
+
   .input {
-  text-align: left;
-  vertical-align: middle;
-  margin-left: 60%;
-  margin-top: 1%;
-  width: 100%;
-  margin: 10px 50px 15px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 60%;
+    margin-top: 1%;
+    width: 100%;
+    margin: 10px 50px 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
 
   .comment-form input[type="submit"] {
-  display: block;
-  width: 200px;
-  padding: 20px 0;
-  margin-top: 0px;
-  margin-bottom: 10%;
-  margin-left: 20%;
-  border: 0;
-  font-size: 14px;
-  color: #fff;
-  line-height: 1;
-  background: #2f2f2f;
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    margin-top: 0px;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    background: #2f2f2f;
+  }
+
+  .comment-list {
+  padding: 0;
+  text-align: center;
+  margin-left: 80%;
+  list-style-type: none;
 }
 
   .dropdown-menu {
-  width: 100%;
-  overflow-y: auto;
-  height: 300px;
-}
+    width: 100%;
+    overflow-y: auto;
+    height: 300px;
+  }
   .labels {
-  /* margin-left: 10%;   */
-  font-family: "Oswald";
-  margin: 5px 10px 5px 10px;
-}
+    /* margin-left: 10%;   */
+    font-family: "Oswald";
+    margin: 5px 10px 5px 10px;
+  }
   .section-header {
     width: 300px;
   }
@@ -1008,8 +1220,8 @@ ul {
   }
 
   .topic-submit {
-  margin-left: 35%;
-}
+    margin-left: 35%;
+  }
 
   .delete-button {
     margin-left: -22%;
@@ -1035,7 +1247,7 @@ ul {
 
   .button-group {
     margin-top: 50%;
-    margin-left: -50%;
+    margin-left: -60%;
     width: 400px;
     grid-row-start: 5;
   }
@@ -1046,10 +1258,13 @@ ul {
     color: red;
   }
 
+  .single-article {
+    width: 21%;
+  }
 
   .comment-form textarea {
     display: block;
-    width: 350%;
+    width: 320%;
     padding: 20px 32px;
     margin-bottom: 40px;
     margin-left: -135%;
@@ -1067,12 +1282,14 @@ ul {
     font-size: 50px;
     position: fixed;
     margin-top: 80%;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-bottom: 65%;
     background-color: white;
     padding-bottom: 10px;
   }
-
+  footer {
+    margin-left: -3.25%;
+  }
   .container-articles {
     margin-top: 20px;
     margin-left: 1%;
@@ -1087,15 +1304,6 @@ ul {
   margin-top: 1%;
 }
 
-footer {
-  width: 100%;
-  left: -100px;
-  right: 0px;
-  bottom: 0px;
-  margin-top: 50%;
-  z-index: 1;
-}
-
 .column {
   margin-bottom: 16px;
   padding: 0 8px;
@@ -1107,11 +1315,9 @@ footer {
 
 .topic-dd {
   margin-top: 1%;
-  height: 100%;;
+  height: 100%;
   width: 100%;
 }
-
-
 
 .w3-tag {
   background-color: rgb(246, 226, 45);
@@ -1142,15 +1348,15 @@ link {
   font-weight: bold;
 }
 
-.link:hover{
-   cursor: pointer;
-  color: rgb(0, 0, 0); 
+.link:hover {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 
 .home-link:hover {
-     cursor: pointer;
-  color: rgb(0, 0, 0); 
+  cursor: pointer;
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 
@@ -1159,7 +1365,6 @@ link {
   cursor: pointer;
   color: #666363;
   font-family: "Oswald";
-
 }
 
 .hashtag:hover {

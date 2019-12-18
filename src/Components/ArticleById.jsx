@@ -9,7 +9,6 @@ import CommentsList from "./CommentsList";
 class ArticleById extends Component {
   state = {
     article: [],
-    user: "jessjelly",
     isLoading: true,
     error: null
   };
@@ -61,7 +60,7 @@ class ArticleById extends Component {
         <br></br>
         <h4 className="comment-count">Comments: {article.comment_count}</h4>
         <br></br>
-        <CommentsList article_id={article.article_id} user={this.state.user} />
+        <CommentsList article_id={article.article_id} user={this.props.loggedUser} />
       </article>
     );
   }

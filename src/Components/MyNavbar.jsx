@@ -20,7 +20,8 @@ z-index: 10;
 
 class MyNavbar extends Component {
   state = {
-    topics: []
+    topics: [],
+    collapsed: true,
   };
 
   componentDidMount = () => {
@@ -49,22 +50,30 @@ class MyNavbar extends Component {
     }
   };
 
+  toggleNavBar() {
+  this.setState(currentState => {
+    return {collapsed: !currentState.collapsed }
+  })  
+  }
+
   render() {
     const { topics, error } = this.state;
     if (error) return <ErrorPage status={error.status} msg={error.msg} />;
     return (
       <Navigate>
-        <Navbar bg="light" expand="lg" collapseOnSelect = "true" >
+        <Navbar bg="light" expand="lg" collapseOnSelect="true">
           <Navbar.Brand>
-            <Link to="/" className="home-link">NC News</Link>
+            <Link to="/" className="home-link">
+              NC News
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Link to="/" className="link">
+              <Link to="/" className="link" onClick={this.toggleNavBar}>
                 Home
               </Link>
-              <Link to="/articles" className="link">
+              <Link to="/articles" className="link" onClick={this.toggleNavBar}>
                 Articles
               </Link>
               <NavDropdown
@@ -80,6 +89,7 @@ class MyNavbar extends Component {
                         <Link
                           className="dropdown-links"
                           to={`/topics/${topic.slug}`}
+                          onClick={this.toggleNavBar}
                         >
                           {topic.slug}
                         </Link>
@@ -87,12 +97,13 @@ class MyNavbar extends Component {
                     );
                   })}
                   <NavDropdown.Divider />
-
                   <TopicAdder />
                 </div>
               </NavDropdown>
             </Nav>
-            <Link to="/user" className="logged-in">Logged in as: {this.props.loggedUser}</Link>
+            <Link to="/user" className="logged-in" onClick={this.toggleNavBar}>
+              Logged in as: {this.props.loggedUser}
+            </Link>
           </Navbar.Collapse>
         </Navbar>
       </Navigate>
