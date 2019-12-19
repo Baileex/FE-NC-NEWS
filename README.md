@@ -46,3 +46,12 @@ Install all dependencies with
 
 ```
 npm i 
+
+
+Coming soon...
+
+  * view articles written by a specified user
+  * post a new article to an existing topic
+  * delete your own articles
+  * ability to see which users have been the most active by adding articles and comments
+  * ability to sort users by how popular they are based on an aggregation of their article and comment vote counts
