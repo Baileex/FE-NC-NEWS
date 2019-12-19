@@ -49,7 +49,9 @@ class User extends Component {
             <br></br>
             <h2>Username: {user.username}</h2>
             <br></br>
-            <p>About Me:</p>
+            <h2>About Me:</h2>
+            <br></br>
+            <p>I love reading about the news - my favorite articles are about cooking. I enjoy getting lots of votes on my articles! </p>
           </div>
         </div>
       </div>

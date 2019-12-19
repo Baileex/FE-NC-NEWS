@@ -314,7 +314,7 @@ ul {
   grid-row-start: 7;
   margin-left: 30%;
   margin-top: 60%;
-  font-family: "Oswald"
+  font-family: "Oswald";
 }
 
 .sortOptions {
@@ -373,7 +373,6 @@ ul {
   margin-left: -7%;
 }
 
-
 @media only screen and (max-width: 1440px) {
   .header {
     width: 1440px;
@@ -419,8 +418,6 @@ ul {
     height: 1000%;
     overflow-y: auto;
   }
-
-
 
   .labels {
     font-family: "Oswald";
@@ -478,24 +475,24 @@ ul {
     margin-left: 1800%;
     width: 400px;
     grid-row-start: 5;
-    font-family: "Oswald"
+    font-family: "Oswald";
   }
-  
+
   footer {
     width: 100%;
     margin-left: -0.5%;
   }
 
   .error-msg {
-    left: -55%;
-    top: 60%;
+    left: 3%;
+    top: 12.5%;
     color: red;
   }
   .sortOptions {
     margin-top: -40%;
     margin-left: 4%;
     width: 10%;
-    font-family: "Oswald"
+    font-family: "Oswald";
   }
 
   .options {
@@ -508,11 +505,11 @@ ul {
 
   .comment-form textarea {
     display: block;
-    width: 350%;
+    width: 600%;
     padding: 20px 32px;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: -135%;
+    margin-left: -260%;
     border: 0;
     font-size: 16px;
     line-height: 1;
@@ -585,7 +582,7 @@ ul {
     padding: 20px 0;
     margin-top: 0px;
     margin-bottom: 10%;
-    margin-left: 20%;
+    margin-left: 40%;
     border: 0;
     font-size: 14px;
     color: #fff;
@@ -629,7 +626,8 @@ ul {
   }
 
   .delete-button {
-    margin-left: -22%;
+    margin-left: -10%;
+    font-family: "Oswald";
   }
 
   .comment-list {
@@ -638,7 +636,7 @@ ul {
   }
 
   .comment-count {
-    margin-left: -10%;
+    margin-left: 1%;
   }
 
   .w3-large {
@@ -655,24 +653,27 @@ ul {
     margin-left: 1200%;
     width: 400px;
     grid-row-start: 5;
-    font-family: "Oswald"
+    font-family: "Oswald";
   }
-  
+
+  .comment-list {
+    margin-left: 10%;
+  }
   footer {
     width: 100%;
     margin-left: -0.5%;
   }
 
   .error-msg {
-    left: -55%;
-    top: 60%;
+    left: -6%;
+    top: 15%;
     color: red;
   }
   .sortOptions {
     margin-top: -40%;
     margin-left: 4%;
     width: 10%;
-    font-family: "Oswald"
+    font-family: "Oswald";
   }
 
   .options {
@@ -681,10 +682,10 @@ ul {
 
   .comment-form textarea {
     display: block;
-    width: 350%;
+    width: 600%;
     padding: 20px 32px;
     margin-bottom: 40px;
-    margin-left: -135%;
+    margin-left: -250%;
     border: 0;
     font-size: 16px;
     line-height: 1;
@@ -717,7 +718,7 @@ ul {
 
   .sortOptions {
     margin-left: 0%;
-    width:110%;
+    width: 110%;
     font-family: "Oswald";
     background: white;
   }
@@ -748,7 +749,7 @@ ul {
     padding: 20px 0;
     margin-top: 0px;
     margin-bottom: 10%;
-    margin-left: 20%;
+    margin-left: 35%;
     border: 0;
     font-size: 14px;
     color: #fff;
@@ -791,7 +792,7 @@ ul {
   }
 
   .delete-button {
-    margin-left: -22%;
+    margin-left: -12%;
   }
 
   .comment-list {
@@ -800,7 +801,7 @@ ul {
   }
 
   .comment-count {
-    margin-left: -10%;
+    margin-left: 0%;
   }
 
   .w3-large {
@@ -817,21 +818,21 @@ ul {
     margin-left: 800%;
     width: 400px;
     grid-row-start: 5;
-    font-family: "Oswald"
+    font-family: "Oswald";
   }
 
   .error-msg {
-    left: -55%;
-    top: 60%;
+    left: -15%;
+    top: 33.5%;
     color: red;
   }
 
   .comment-form textarea {
     display: block;
-    width: 350%;
+    width: 500%;
     padding: 20px 32px;
     margin-bottom: 40px;
-    margin-left: -135%;
+    margin-left: -205%;
     border: 0;
     font-size: 16px;
     line-height: 1;
@@ -936,12 +937,13 @@ ul {
   }
 
   .delete-button {
-    margin-left: -22%;
+    margin-left: -25%;
   }
 
   .comment-list {
     text-align: center;
     list-style-type: none;
+    margin-left: 20%
   }
 
   .comment-count {
@@ -967,15 +969,18 @@ ul {
     width: 200px;
     grid-row-start: 5;
   }
-
+  .card {
+    width: 28%;
+    margin-left: -1%;
+  }
   .error-msg {
-    left: -55%;
-    top: 60%;
+    left: -69%;
+    top: 42.5%;
     color: red;
   }
 
   footer {
-    width: 27%
+    width: 27%;
   }
 
   .comment-form textarea {
@@ -1114,6 +1119,7 @@ ul {
     padding: 20px 32px;
     margin-bottom: 40px;
     margin-left: -135%;
+    margin-top: 50%;
     border: 0;
     font-size: 16px;
     line-height: 1;
@@ -1122,6 +1128,13 @@ ul {
     text-align: left;
     align-content: center;
     display: flex;
+  }
+  .button-group {
+
+    margin-left: -10%;
+  }
+  .comment-form {
+    margin-top: 10%;
   }
 
   .topic-title {
@@ -1141,6 +1154,18 @@ ul {
 
   footer {
     width: 24%;
+  }
+  .comment-list {
+    margin-left: 20%;
+  }
+  
+  .delete-button {
+    margin-left: -28%
+  }
+
+  .card {
+    width: 26%;
+    margin-left: -1.5%;
   }
 }
 
@@ -1180,11 +1205,11 @@ ul {
   }
 
   .comment-list {
-  padding: 0;
-  text-align: center;
-  margin-left: 80%;
-  list-style-type: none;
-}
+    padding: 0;
+    text-align: center;
+    margin-left: 80%;
+    list-style-type: none;
+  }
 
   .dropdown-menu {
     width: 100%;

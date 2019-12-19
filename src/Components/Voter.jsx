@@ -14,7 +14,7 @@ class Voter extends Component {
     this.setState(currentState => {
       return { votesDifference: currentState.votesDifference + votes };
     });
-    api.patchVotes(votes, id, object).catch(({ response }) => {
+    api.patchVotes(votes, "aa", object).catch(({ response }) => {
       this.setState({
         error: {
           msg: response.data.msg,
@@ -45,7 +45,7 @@ class Voter extends Component {
           name="down"
           disabled={votesDifference === -1}
         ></Downvote>
-        {error && <Errormsg status={error.status} msg="vote not registered" />}
+        {error && <Errormsg msg="vote not registered"/> }
       </Votebox>
     );
   }

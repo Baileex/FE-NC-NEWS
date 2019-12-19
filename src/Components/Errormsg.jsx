@@ -4,7 +4,7 @@ const Errormsg = (err) => {
   return (
     <div className="error-msg">
       <h6>
-        Status: {err.status}, {err.msg}
+        {err.msg}
       </h6>
     </div>
   );

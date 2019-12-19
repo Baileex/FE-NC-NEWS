@@ -3,7 +3,7 @@ import Voter from "./Voter";
 import formatDate from "../utils/utils";
 
 const CommentCard = props => {
-  const {comment, user} = props;
+  const {comment, user, removeComment} = props;
   return (
     <div>
       <li className="comment" key={comment.comment_id}>
@@ -29,7 +29,7 @@ const CommentCard = props => {
           {comment.author === user && (
             <button
               className="w3-button w3-light-grey w3-section delete-button"
-              onClick={() => this.removeComment(comment.comment_id)}
+              onClick={() => removeComment(comment.comment_id)}
             >
               Delete
             </button>

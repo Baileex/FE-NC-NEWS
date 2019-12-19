@@ -83,11 +83,16 @@ grid-row-end: 3
 `;
 
 export const Date = styled.h5`
-grid-column-start: 1
+         grid-column-start: 1
 grid-column-end: 2
 gird-row-start: 3
 grid-row-end: 4
-`;
+ @media only screen and (max-width: 425px) {
+           font-size: 14px
+           grid-column-start: 3
+           grid-column-end: 3
+         }
+       `;
 
 export const Readmore = styled.h5`
 grid-column-start: 1
@@ -106,7 +111,8 @@ grid-row-end: 6
            grid-column-start: 3
          grid-column-end: 4
          gird-row-start: 5
-grid-row-end: 6
+         grid-row-end: 6
+         margin-left: -10%;
          }
          @media only screen and (max-width: 320px) {
            font-size: 18px
@@ -142,34 +148,34 @@ export const Votes = styled.div`
 `;
 
 export const Upvote = styled.button`
-         border: solid black;
-         border-width: 0 3px 3px 0;
-         padding: 3px;
-         transform: rotate(-135deg);
-         -webkit-transform: rotate(-135deg);
-         cursor: default;
-         :active {
-           border: solid yellow;
-         }
-         :hover {
-           border: solid yellow;
-         }
-       `;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  cursor: default;
+  :active {
+    border: solid yellow;
+  }
+  :hover {
+    border: solid yellow;
+  }
+`;
 
 export const Downvote = styled.button`
-         border: solid black;
-         border-width: 0 3px 3px 0;
-         padding: 3px;
-         transform: rotate(45deg);
-         -webkit-transform: rotate(45deg);
-         cursor: default;
-         :active {
-           border: solid yellow;
-         }
-         :hover {
-           border: solid yellow;
-         }
-       `;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  cursor: default;
+  :active {
+    border: solid yellow;
+  }
+  :hover {
+    border: solid yellow;
+  }
+`;
 
 export const ArticleList = styled.ul`
   list-style-type: none;
@@ -202,5 +208,3 @@ export const ArticleList = styled.ul`
 }
 
 `;
-
-

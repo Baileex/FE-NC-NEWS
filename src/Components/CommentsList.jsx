@@ -96,7 +96,7 @@ class CommentsList extends Component {
         <ul className="comment-list">
           {comments.map(comment => {
             return (
-              <CommentCard comment={comment} user={user}/>
+              <CommentCard comment={comment} user={user} removeComment={this.removeComment}/>
             );
           })}
         </ul>
