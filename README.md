@@ -46,7 +46,7 @@ Install all dependencies with
 
 ```
 npm i 
-
+```
 
 Coming soon...
 
