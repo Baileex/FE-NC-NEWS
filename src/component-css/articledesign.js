@@ -112,7 +112,6 @@ grid-row-end: 6
          grid-column-end: 4
          gird-row-start: 5
          grid-row-end: 6
-         margin-left: -10%;
          }
          @media only screen and (max-width: 320px) {
            font-size: 18px
