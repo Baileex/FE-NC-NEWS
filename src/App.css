@@ -179,6 +179,7 @@ ul {
 }
 .topic-submit {
   margin-left: 40%;
+  font-family: "Oswald"
 }
 
 .labels {
@@ -445,6 +446,7 @@ ul {
 
   .topic-submit {
     margin-left: 35%;
+    font-family: "Oswald"
   }
 
   .delete-button {
@@ -623,6 +625,7 @@ ul {
 
   .topic-submit {
     margin-left: 35%;
+    font-family: "Oswald"
   }
 
   .delete-button {
@@ -789,6 +792,7 @@ ul {
 
   .topic-submit {
     margin-left: 35%;
+    font-family: "Oswald"
   }
 
   .delete-button {
@@ -1081,6 +1085,7 @@ ul {
 
   .topic-submit {
     margin-left: 35%;
+    font-family: "Oswald"
   }
 
   .delete-button {
@@ -1223,6 +1228,7 @@ ul {
 
   .topic-submit {
     margin-left: 35%;
+    font-family: "Oswald"
   }
 
   .delete-button {
@@ -1388,6 +1394,7 @@ ul {
 
   .topic-submit {
     margin-left: 35%;
+    font-family: "Oswald"
   }
 
   .delete-button {
@@ -1526,8 +1533,10 @@ ul {
   .dropdown-menu {
     width: 100%;
     overflow-y: auto;
-    height: 300px;
+    height: 200px;
   }
+
+
   .labels {
     /* margin-left: 10%;   */
     font-family: "Oswald";
@@ -1558,6 +1567,7 @@ ul {
 
   .topic-submit {
     margin-left: 35%;
+    font-family: "Oswald"
   }
 
   .delete-button {
