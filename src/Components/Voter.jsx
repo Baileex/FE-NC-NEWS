@@ -14,7 +14,7 @@ class Voter extends Component {
     this.setState(currentState => {
       return { votesDifference: currentState.votesDifference + votes };
     });
-    api.patchVotes(votes, "aa", object).catch(({ response }) => {
+    api.patchVotes(votes, id, object).catch(({ response }) => {
       this.setState({
         error: {
           msg: response.data.msg,
