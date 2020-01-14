@@ -8,6 +8,7 @@ This project is a news style site with functions including:
 * article/comment voting
 * comment posting/deleting
 * adding new topics
+* post a new article to an existing topic
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -51,7 +52,6 @@ npm i
 Coming soon...
 
   * view articles written by a specified user
-  * post a new article to an existing topic
   * delete your own articles
   * ability to see which users have been the most active by adding articles and comments
   * ability to sort users by how popular they are based on an aggregation of their article and comment vote counts

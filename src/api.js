@@ -83,3 +83,9 @@ return axios.post(`${baseURL}/topics`, {slug: title, description: description}).
   return data.topic;
 })
 }
+
+export const postArticle = (title, body, author, topic) => {
+  return axios.post(`${baseURL}/articles`, { title: title, topic:topic, author:author, body:body }).then(({data}) => {
+    return data.article;
+  })
+}

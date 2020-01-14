@@ -11,6 +11,7 @@ import User from "./Components/User";
 import Footer from "./Components/Footer";
 import TopicAdder from "./Components/TopicAdder"
 import "./App.css";
+import ArticlePoster from "./Components/ArticlePoster";
 
 class App extends Component {
   state = {
@@ -32,6 +33,7 @@ class App extends Component {
             />
             <Articles path="/topics/:topic_slug" />
             <TopicAdder path="/topics/newtopic"/>
+            <ArticlePoster user={this.state.loggedUser} path="/articles/newarticle"/>
             <ErrorPage
             
               default

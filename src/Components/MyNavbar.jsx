@@ -28,6 +28,7 @@ class MyNavbar extends Component {
     this.fetchTopics();
   };
 
+
   fetchTopics = () => {
     api
       .getTopics()
@@ -51,9 +52,9 @@ class MyNavbar extends Component {
   };
 
   toggleNavBar() {
-  this.setState(currentState => {
-    return {collapsed: !currentState.collapsed }
-  })  
+    this.setState(currentState => {
+      return { collapsed: !currentState.collapsed };
+    });
   }
 
   render() {
@@ -100,6 +101,12 @@ class MyNavbar extends Component {
                   <TopicAdder />
                 </div>
               </NavDropdown>
+              <Link
+                to="/articles/newarticle"
+                className="link"
+              >
+                New Article
+              </Link>
             </Nav>
             <Link to="/user" className="logged-in" onClick={this.toggleNavBar}>
               Logged in as: {this.props.loggedUser}
