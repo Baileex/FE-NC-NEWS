@@ -68,6 +68,10 @@ class ArticlePoster extends Component {
       });
   };
 
+  handleClick(event) {
+    event.preventDefault()
+  }
+
 
   render() {
     const { topics, body, title, error, topic, post } = this.state;
